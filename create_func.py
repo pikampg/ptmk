@@ -79,24 +79,16 @@ def fcs_gen_f_100():
 
 
 def input_mln(full_name, date_of_birth, gender):
-    n = 0
     for _ in range(10**6):
         cursor.execute(insert_new_line_request, (fcs_gen(), birth_gen(), gender_gen()))
         connection.commit()
-        n += 1
-        if n == 5:
-            break
     return
 
 
 def input_gender_m_f_100():
-    n = 0
     for _ in range(100):
         cursor.execute(insert_new_line_request, (fcs_gen_f_100(), birth_gen(), 'M'))
         connection.commit()
-        n += 1
-        if n == 5:
-            break
     return
 
 

@@ -24,7 +24,7 @@ try:
     # full_output()
     # input_mln(fcs_gen(), birth_gen(), gender_gen())                       # myAPP 4.1
     # input_gender_m_f_100()                                                # myAPP 4.2
-    # time_selection()
+    time_selection()
 
 except Exception as _ex:
     print('[INFO] Error while working with PostgreSQL', _ex)
