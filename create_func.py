@@ -79,7 +79,7 @@ def fcs_gen_f_100():
 
 
 def input_mln(full_name, date_of_birth, gender):
-    for _ in range(10**6):
+    for _ in range(10**7):
         cursor.execute(insert_new_line_request, (fcs_gen(), birth_gen(), gender_gen()))
         connection.commit()
     return

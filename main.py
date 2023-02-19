@@ -1,7 +1,7 @@
 import datetime
 
 import psycopg2
-from config import host, user, password, db_name
+from config import host, user, password, db_name, connection
 from create_func import create_table, insert_new_line, full_output
 from create_func import get_output_full_name_with_date_of_birth
 from create_func import get_output_fcs_date_of_birth_gender_full_years
