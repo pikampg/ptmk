@@ -30,3 +30,26 @@ result_selection = """
         SELECT * FROM users
         WHERE gender = 'M' AND full_name LIKE 'F%'
         """
+create_index = """
+        CREATE INDEX name_idx ON users (full_name) include (gender)
+        """
+
+drop_index = """
+        DROP INDEX name_idx
+        """
+
+create_table_time_compare = """
+        CREATE Table IF NOT EXISTS time_compare(
+        time_without_idx DECIMAL(20, 18) NOT NULL,
+        time_with_idx DECIMAL(20, 18) NOT NULL);
+        """
+
+insert_in_table_without_time = """
+        INSERT INTO time (time_without_idx)
+        VALUES (%s);
+        """
+
+insert_in_table_with_time = """
+        INSERT INTO time_compare (time_with_idx)
+        VALUES (%s);
+        """
